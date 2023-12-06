@@ -1,0 +1,20 @@
+name: Workflow Demo
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Create a text file
+      run: echo "Hello, world!" > hello.txt
+
+    - name: Archive text file
+      uses: actions/upload-artifact@v2
+      with:
+        name: hello-artifact
+        path: hello.txt
