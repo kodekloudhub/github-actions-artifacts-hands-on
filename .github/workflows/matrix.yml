@@ -2,7 +2,7 @@ name: matrix example
 on: 
   push:
     paths:
-    - '.github/workflows/matrix.yamlyml'
+    - '.github/workflows/matrix.yml'
 
 jobs:
   matrix:
