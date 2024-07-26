@@ -22,7 +22,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Archive text file
+    - name: Download the text file
       uses: actions/downlaod-artifact@v2
       with:
         name: hello-artifact
