@@ -21,7 +21,7 @@ jobs:
   download: #added
     concurrency: 
       group: production-deployment
-      cancel-in-progress: true
+      cancel-in-progress: false
     needs: build
     runs-on: ubuntu-latest
   
