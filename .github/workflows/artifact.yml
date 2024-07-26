@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Archive text file
-      uses: actions/upload-artifact@v2
+      uses: actions/downlaod-artifact@v2
       with:
         name: hello-artifact
         path: ./artifacts
