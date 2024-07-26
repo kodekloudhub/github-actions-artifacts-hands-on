@@ -19,6 +19,9 @@ jobs:
         name: hello-artifact
         path: hello.txt
   download: #added
+    concurrency: 
+      group: production-deployment
+      cancel-in-progress: true
     needs: build
     runs-on: ubuntu-latest
   
