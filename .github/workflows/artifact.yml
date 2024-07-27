@@ -28,6 +28,10 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
+      - name: dump github contexts
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - name: run sleep 
         run: sleep 6s
         timeout-minutes: 1
